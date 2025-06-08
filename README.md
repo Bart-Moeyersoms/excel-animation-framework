@@ -1,46 +1,127 @@
-# Getting Started with Create React App
+# 🎬 Excel Animation Framework
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A powerful framework for creating interactive, animated Excel tutorials with multi-language support and export capabilities.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- 🌍 **Multi-language support** (Dutch, English, French)
+- 🎨 **Multiple themes** (Excel 2019, Excel 365, Google Sheets)
+- 🖱️ **Realistic mouse simulation**
+- 📤 **Export to GIF/MP4**
+- 🔧 **Modular animation system**
+- 📱 **Responsive design**
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/excel-animation-framework.git
+cd excel-animation-framework
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Install dependencies
+npm install
 
-### `npm test`
+# Start development server
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏗️ Project Structure
 
-### `npm run build`
+```
+src/
+├── components/
+│   ├── framework/          # Core framework components
+│   ├── scenarios/          # Predefined animation scenarios
+│   └── ui/                # UI components
+├── themes/                # Theme definitions
+├── translations/          # Language files
+├── types/                 # TypeScript type definitions
+└── utils/                 # Utility functions
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎯 Creating New Scenarios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```typescript
+// Example: Creating a SUM formula scenario
+const sumScenario = {
+  id: 'sum_formula',
+  steps: [
+    {
+      description: 'Click on cell D2',
+      actions: [
+        { type: 'selectCell', cell: 'D2' },
+        { type: 'typeText', text: '=SUM(A2:C2)' }
+      ]
+    }
+  ]
+};
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌍 Adding Translations
 
-### `npm run eject`
+```typescript
+// translations/es.ts
+export const es = {
+  student: 'Estudiante',
+  grade: 'Nota',
+  result: 'Resultado',
+  // ... more translations
+};
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🎨 Creating Themes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```typescript
+// themes/customTheme.ts
+export const customTheme = {
+  headerBg: '#your-color',
+  cellBorder: '#your-border-color',
+  selectedBg: '#your-selection-color',
+  // ... more theme properties
+};
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📤 Export Options
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **GIF**: Perfect for embedding in documentation
+- **MP4**: High quality for video tutorials
+- **Interactive HTML**: For web-based training
 
-## Learn More
+## 🤝 Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📋 Roadmap
+
+- [ ] Visual scenario editor
+- [ ] More spreadsheet functions (VLOOKUP, PIVOT, etc.)
+- [ ] Advanced mouse movements
+- [ ] PowerPoint integration
+- [ ] Mobile app support
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎯 Use Cases
+
+- 📚 Training materials
+- 📖 Documentation
+- 🎥 Tutorial videos
+- 🌐 Interactive websites
+- 📱 Mobile learning apps
+
+## 🔧 Tech Stack
+
+- **React** + **TypeScript**
+- **HTML5 Canvas** for animations
+- **GIF.js** for GIF export
+- **HTML2Canvas** for screenshots
+
+---
+
+Made with ❤️ for better Excel education
